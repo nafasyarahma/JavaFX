@@ -1,0 +1,91 @@
+package javafxapplicationtest;
+
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.TilePane;
+import javafx.stage.Stage;
+
+
+public class JavaFXApplicationTest extends Application {
+    
+    @Override
+    public void start(Stage primaryStage) {
+        Button btnRegister = new Button();
+        TextField tf1 = new TextField();
+        TextField tf2 = new TextField();
+        TextField tf3 = new TextField();
+        TextField tf4 = new TextField();
+        TextField tf5 = new TextField();
+        TextField tf6 = new TextField();
+        Label labelFirstName = new Label("First Name ");
+        Label labelLastName = new Label("Last Name ");
+        Label labelEmail = new Label("E-mail Address ");
+        Label labelContact = new Label("Contact No ");
+        Label labelPassword = new Label("Password ");
+        Label labelConfirm = new Label("Confirm Password ");  
+        btnRegister.setText("Register");
+
+        
+        Group root = new Group();
+        TilePane panel1 = new TilePane();
+        TilePane panel2 = new TilePane();
+        TilePane panel3 = new TilePane();
+        TilePane panel4 = new TilePane();
+        TilePane panel5 = new TilePane();
+        TilePane panel6 = new TilePane();
+
+        
+        panel1.getChildren().add(labelFirstName);       
+        panel1.getChildren().add(tf1); 
+        panel2.getChildren().add(labelLastName);       
+        panel2.getChildren().add(tf2);
+        panel3.getChildren().add(labelEmail); 
+        panel3.getChildren().add(tf3);
+        panel4.getChildren().add(labelContact); 
+        panel4.getChildren().add(tf4);
+        panel5.getChildren().add(labelPassword); 
+        panel5.getChildren().add(tf5);
+        panel6.getChildren().add(labelConfirm); 
+        panel6.getChildren().add(tf6);
+        
+        panel1.setLayoutX(50);
+        panel1.setLayoutY(30);
+        panel2.setLayoutX(50);
+        panel2.setLayoutY(70);
+        panel3.setLayoutX(50);
+        panel3.setLayoutY(110);
+        panel4.setLayoutX(50);
+        panel4.setLayoutY(150);
+        panel5.setLayoutX(50);
+        panel5.setLayoutY(190);
+        panel6.setLayoutX(50);
+        panel6.setLayoutY(230);
+        
+        btnRegister.setLayoutX(200);
+        btnRegister.setLayoutY(280);
+      
+        root.getChildren().add(panel1);
+        root.getChildren().add(panel2);
+        root.getChildren().add(panel3);
+        root.getChildren().add(panel4);
+        root.getChildren().add(panel5);
+        root.getChildren().add(panel6);
+        root.getChildren().add(btnRegister);
+ 
+        Scene scene = new Scene(root, 500, 350);
+     
+        primaryStage.setTitle("Register");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    
+    public static void main(String[] args) {
+        launch(args);
+    }
+    
+}
